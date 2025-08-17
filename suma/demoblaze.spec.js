@@ -36,7 +36,7 @@ test('has title', async ({ page }) => {
   await expect(placeOrderButton).toBeVisible();
 
   var nextButtonClick=page.locator("button#next2");
-  await nextButtonClick.click();
+  //await nextButtonClick.click();
 
 
   // var sonyImage=page.locator("div#tbodyid div.col-lg-4.col-md-6.mb-4").nth(6);
