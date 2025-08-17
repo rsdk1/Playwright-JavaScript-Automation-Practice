@@ -1,8 +1,8 @@
-name: Playwright Tests
+name: Playwright Tests (para-bank)
 
 on:
   schedule:
-    - cron: "30 11 17 8 *"   
+    - cron:  "0 12 17 8 *"
   workflow_dispatch:
 
 jobs:
