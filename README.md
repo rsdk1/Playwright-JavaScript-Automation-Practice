@@ -27,6 +27,13 @@ After running tests, Playwright generates reports in the playwright-report/ fold
 This project is for learning purposes and personal practice.
 
 ----
+💬 Stay tuned for more updates !
+---
+
+ AUTHOR : RajaSuma.D.K
+ Linkedin:www.linkedin.com/in/rsdk 
+ Github: https://github.com/rsdk1
+ Website: https://rsdk.my.canva.site/
 
 
 
