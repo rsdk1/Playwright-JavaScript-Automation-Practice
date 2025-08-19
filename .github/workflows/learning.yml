@@ -36,4 +36,4 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test barat/learning.spec.js --project=chromium
+        run: npx playwright test learning.spec.js --project=chromium
