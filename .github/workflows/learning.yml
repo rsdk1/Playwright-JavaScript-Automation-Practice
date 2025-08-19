@@ -2,7 +2,7 @@ name: Playwright Tests (learning)
 
 on:
   workflow_dispatch:
-   inputs:
+    inputs:
       username:
         description: 'Login Username'
         required: true
@@ -11,10 +11,14 @@ on:
         description: 'Login Password'
         required: true
         default: 'Password123'
+
 jobs:
   test:
-    
     runs-on: ubuntu-latest
+
+    env:
+      LOGIN_USERNAME: ${{ inputs.username}}
+      LOGIN_PASSWORD: ${{ inputs.password}}
 
     steps:
       - name: Checkout repository
@@ -32,7 +36,4 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test learning.spec.js --project=chromium
-        env:
-        LOGIN_USERNAME: ${{ secrets.LOGIN_USERNAME }}
-        LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}
+        run: npx playwright test barat/learning.spec.js --project=chromium
