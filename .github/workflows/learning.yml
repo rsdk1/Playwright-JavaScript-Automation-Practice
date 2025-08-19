@@ -16,6 +16,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      LOGIN_USERNAME: ${{ inputs.username}}
+      LOGIN_PASSWORD: ${{ inputs.password}}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -32,7 +36,4 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        env:                 
-          LOGIN_USERNAME: ${{ github.event.inputs.username }}
-          LOGIN_PASSWORD: ${{ github.event.inputs.password }}
         run: npx playwright test barat/learning.spec.js --project=chromium
