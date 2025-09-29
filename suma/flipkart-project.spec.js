@@ -11,12 +11,14 @@ test.describe('Flipkart Automation', () => {
     const searchPage = new SearchPage(page);
     const productPage = new ProductPage(page);
 
-
-    await homePage.gotoHome();
-
     // Data-driven search
     for (let product of testData.products) {
     await homePage.gotoHome();
+    const modalClose = page.locator("//span[@class='_30XB9F']");
+
+    if (await modalClose.isVisible()) {
+      await modalClose.click();
+    }
       await homePage.searchProduct(product);
 
       await searchPage.selectFirstProduct();
