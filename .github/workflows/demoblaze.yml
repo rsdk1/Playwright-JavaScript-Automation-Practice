@@ -24,3 +24,6 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test demoblaze.spec.js --project=chromium 
+
+      - name: Publish Test Summary Results
+        run: npx github-actions-ctrf ctrf/ctrf-report.json
